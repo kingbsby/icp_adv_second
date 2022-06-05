@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.8.4",
+  "canisters": {
+    "icp_adv_second": {
+      "type": "motoko",
+      "main": "src/icp_adv_second/main.mo"
+    },
+    "icp_adv_second_assets": {
+      "type": "assets",
+      "source": [
+        "src/icp_adv_second_assets/assets"
+      ],
+      "dependencies": [
+        "icp_adv_second"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
